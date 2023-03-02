@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import {Route,Routes} from "react-router-dom";
 
 import Checks from "./problems/Checks";
 import "./Support1Fix.css"
-import Priority from "./problems/Priority";
 
 function Support1Fix(){
 
@@ -27,10 +25,7 @@ function Support1Fix(){
             )}
             {!showSpinner && (
                 <div className="content">
-                    <Routes>
-                        <Route path="/home/check" element={<Checks />} />
-                        <Route path='/home/priority' element={<Priority />} />
-                    </Routes>
+                        <Checks/>
                 </div>
             )}
         </>

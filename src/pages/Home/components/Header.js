@@ -16,7 +16,7 @@ function Header(){
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="src/pages#" style={{padding: 10 + "px"}}>אנשי קשר</a>
+                        <a className="nav-link active" aria-current="page" href="src/pages#" style={{padding: 10 + "px" , backgroundColor:"#cff4fc"}}>אנשי קשר</a>
                     </li>
                     <MenuSection/>
                     <MenuSection2/>
@@ -27,7 +27,7 @@ function Header(){
                 </ul>
                 <form className="d-flex" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button className="btn btn-outline-success" type="submit">Search</button>
+                    <button className="btn btn-outline-success" type="submit" style={{backgroundColor: "#cff4fc"}}>Search</button>
                 </form>
             </div>
         </div>

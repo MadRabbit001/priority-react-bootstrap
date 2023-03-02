@@ -16,7 +16,7 @@ function Login(){
                 <input placeholder={"password"}/>
                 <button className={"btn btn-primary"}>login</button>
             </div>
-            <img className="App-logo" src={logo} alt={"priority logo"}/>
+            <img className="App-logo show" src={logo} alt={"priority logo"}/>
         </div>
             <Footer/>
         </div>

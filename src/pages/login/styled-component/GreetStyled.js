@@ -60,7 +60,7 @@ import styled from 'styled-components';
           -webkit-text-fill-color: #333333;
           -webkit-text-stroke-color: deeppink;
           -webkit-text-stroke-width: thin;
-          font-size: 30px;
+          font-size: 2rem;
           margin-left: 10px;
           font-weight: bold;
           text-align: center;

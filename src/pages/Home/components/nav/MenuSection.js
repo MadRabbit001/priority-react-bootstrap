@@ -86,7 +86,7 @@ const TriggerButton = styled('button')(
   border-radius: 12px;
   padding: 12px 16px;
   line-height: 1.5;
-  background: ${theme.palette.mode === 'dark' ? grey[900] : 'rgba(18,186,210,0)'};
+  background: ${theme.palette.mode === 'dark' ? grey[900] : '#cff4fc'};
   border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : 'rgba(18,186,210,0)'};
   color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
 
@@ -233,6 +233,9 @@ export default function WrappedMenuItems() {
                     </StyledMenuItem>
                     <StyledMenuItem onClick={createHandleMenuClick('Print...')}>
                         עסקאות לא עוברות
+                    </StyledMenuItem>
+                    <StyledMenuItem onClick={createHandleMenuClick('Print...')}>
+                        צ'קים
                     </StyledMenuItem>
                 </MenuSection>
                 <MenuSection label="נתונים בפריוריטי">

@@ -66,7 +66,7 @@
 /*}*/
 
 /*/////////IMAGE STYLE + ANIMATION////////*/
-img{
+.App-logo{
     /*position: center;*/
     border-radius: 50%;
     margin-left: 128.5vh;
@@ -96,7 +96,102 @@ img{
 }
 
 Footer{
-    padding: 60px;
+    /*padding: 60px;*/
     text-align: center;
     margin-bottom: 1vh;
+}
+
+@media only screen and (max-device-width: 821px){
+
+    .container{
+        background-image: url("/src/pages/pictures/Login.PNG") ;
+        background-size: 500%;
+        background-repeat: no-repeat;
+        overflow: unset;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .two{
+        display: flex;
+        justify-content: center;
+        flex: 1;
+
+    }
+
+    .login{
+        position: absolute;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: flex-end;*/
+        background-color: rgba(110, 110, 110, 0.61);
+        margin-left: 0px;
+        /*margin-top: 200px;*/
+        /*height: 50vh;*/
+        /*width:38vh;*/
+        border: 1px solid #fff ;
+        z-index: 1;
+
+    }
+
+    .login:hover{
+        box-shadow: 0px 0px 5px 2px #00cdff;
+
+    }
+
+    .login input{
+        /*width: 300px;*/
+        /*height: 30px;*/
+        /*font-size: 29px;*/
+        /*margin-left: 30px;*/
+        /*margin-bottom: 5px;*/
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*/////////IMAGE STYLE + ANIMATION////////*/
+    .App-logo{
+        /*position: center;*/
+        border-radius: 50%;
+        margin-left: 128.5vh;
+        margin-top: 45vh;
+        z-index: 0;
+        height: 66px;
+        width: 66px;
+    }
+
+    .App-logo {
+        pointer-events: none;
+    }
+
+    .show{
+        display: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .App-logo {
+            animation: App-logo-spin infinite 10s running;
+        }
+    }
+
+    @keyframes App-logo-spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    Footer{
+        /*padding: 60px;*/
+        text-align: center;
+        margin-bottom: 1vh;
+        color: black;
+    }
 }

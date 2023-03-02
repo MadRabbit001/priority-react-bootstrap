@@ -1,3 +1,7 @@
+*{
+    z-index: 1;
+}
+
 .spinner {
     display: flex;
     align-items: center;

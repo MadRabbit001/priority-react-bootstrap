@@ -1,3 +1,5 @@
+
+
 .check {
     display: flex;
     flex-direction: column;
@@ -33,6 +35,12 @@
 .check p {
     text-align: right;
 }
+
+.checkIMG{
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 
