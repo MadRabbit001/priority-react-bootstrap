@@ -7,6 +7,8 @@ import MenuItemUnstyled, {
 import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import PopperUnstyled from '@mui/base/PopperUnstyled';
 import { styled } from '@mui/system';
+import {Link} from "react-router-dom";
+import {useState} from "react";
 
 const blue = {
     100: '#DAECFF',
@@ -143,7 +145,12 @@ MenuSection.propTypes = {
     label: PropTypes.string.isRequired,
 };
 
-export default function WrappedMenuItems() {
+export default function WrappedMenuItems({ name, items, handleContentChange }) {
+
+    const handleClick = (item) => {
+        handleContentChange(item);
+    };
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const isOpen = Boolean(anchorEl);
     const buttonRef = React.useRef(null);
@@ -228,18 +235,18 @@ export default function WrappedMenuItems() {
                     </StyledMenuItem>
                 </MenuSection>
                 <MenuSection label="תקשורת">
-                    <StyledMenuItem onClick={createHandleMenuClick('Save as...')}>
-                        אין סנכרון
+                    <StyledMenuItem onClick={createHandleMenuClick('Save as...')} onClick={() => handleClick("משרד אחורי")}>
+                        משרד אחורי
                     </StyledMenuItem>
                     <StyledMenuItem onClick={createHandleMenuClick('Print...')}>
                         עסקאות לא עוברות
                     </StyledMenuItem>
-                    <StyledMenuItem onClick={createHandleMenuClick('Print...')}>
-                        צ'קים
+                    <StyledMenuItem onClick={createHandleMenuClick('Print...')} onClick={() => handleClick("צ'קים")}>
+                       צ'קים
                     </StyledMenuItem>
                 </MenuSection>
                 <MenuSection label="נתונים בפריוריטי">
-                    <StyledMenuItem onClick={createHandleMenuClick('Zoom in')}>
+                    <StyledMenuItem onClick={createHandleMenuClick('Zoom in')} onClick={() => handleClick('מק"טים')}>
                         מק"טים
                     </StyledMenuItem>
                     <StyledMenuItem onClick={createHandleMenuClick('Zoom out')}>

@@ -1,8 +1,17 @@
 import React from "react";
 
+import "./Checks.css";
+import SMP1 from "./problem-pic/priority/SMP1";
+import SMP2 from "./problem-pic/priority/SMP2";
+import SMP3 from "./problem-pic/priority/SMP3";
+import SMP4 from "./problem-pic/priority/SMP4";
+import SMP5 from "./problem-pic/priority/SMP5";
+import SMP6 from "./problem-pic/priority/SMP6";
+
+
 function Priority(){
     return (
-        <div>
+        <div className={"check"}>
             <h1>פריוריטי</h1>
             <h2 id="sync">תקלת סנכרון בדיקת פריט ב-Priority Client</h2>
             <p className="war">**באישור ר"צ</p>
@@ -13,7 +22,7 @@ function Priority(){
             <p>לרדת למסך בן</p>
             <p>לחפש מחירי מוצרים בתוקף</p>
             <p>לשנות את מחיר הפריט</p>
-            <img src="sync.PNG" alt="sync"/>
+            <SMP1/>
             <h2 id="gift">מנפיקי גיפטים ב-Priority</h2>
             <p><b>מיקום בפריוריטי של כל צד ג' שרלוונטי</b></p>
             <p>סניפים> עמדות מכירה לסניף> מספר מסוףDTS =</p>
@@ -45,12 +54,12 @@ function Priority(){
                 לוודא דגל פעיל בפריוריטי במסך 'הגדרת מבצעים' > מסך בן סניפים למבצע
                 שמסומן דגל > מסך בן פריט למבצע עם מסומן על משפחת מבצעים דגל פעיל >
             </p>
-            <img src="discount.PNG" alt="discount"/>
+            <SMP2/>
             <p className="short">
                 בתוכנת הקופה במסך ניהול מערכת - נתוני מבצע - ניתן להקליד בחיווי קוד מבצע
                 את הקוד המבצע הנדרש ולראות האם המבצע נשלף ומכאן הסתכנרן לקופה.
             </p>
-            <img src="discountapp.PNG" alt="discountapp"/>
+            <SMP3/>
             <h2 id="hand">הנחה ידנית</h2>
             <p>
                 <b>תקלה:</b> SC22049447– מק"ט לא מקושר למבצע, בדיקה במסך כרטיס פריט לא
@@ -59,11 +68,11 @@ function Priority(){
             <p>
                 <b>פיתרון:</b> יש לוודא האם המוכרנית רשאית לבצע הנחה ידנית במסך הבא:
             </p>
-            <img src="hand.PNG" alt="manual"/>
+            <SMP4/>
             <h2 id="worker">שיוך עובד לסניף</h2>
             <p><b>תקלה:</b>SC22051341 - שיוך עובד לסניף לצורך שימוש במשרד אחורי, </p>
             <p><b>פיתרון:</b> להסביר למנמ"ר היכן לבדוק בפריורטי </p>
-            <img src="worker.PNG" alt=""/>
+            <SMP5/>
             <h2 id="print">הדפסת העתקי עסקאות</h2>
             <p>
                 ברירת המחדל של הקופה להדפיס העתק לעסקאות מסוג זיכוי / קופון / הצטרפות
@@ -75,7 +84,7 @@ function Priority(){
                 במסך זה כאשר מסמנים את הדגל - יש עמודה בה ניתן להגדיר האם יודפס העתק
                 לסוג העסקה.
             </p>
-            <img src="print.PNG" alt="print"/>
+            <SMP6/>
         </div>
     );
 }

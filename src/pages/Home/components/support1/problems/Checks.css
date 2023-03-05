@@ -1,9 +1,11 @@
-
+* {
+    font-family: "Open Sans Hebrew", sans-serif;
+}
 
 .check {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     /* justify-content: center; */
     height: auto;
     border: 1px solid black;
@@ -34,6 +36,14 @@
 
 .check p {
     text-align: right;
+}
+
+.check ol{
+
+}
+
+.check .war{
+    color: red;
 }
 
 .checkIMG{

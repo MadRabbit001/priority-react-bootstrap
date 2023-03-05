@@ -1,8 +1,20 @@
 import React from "react";
 
+import "./Checks.css";
+import SPBO1 from "./problem-pic/backoffice/SPBO1";
+import SPBO2 from "./problem-pic/backoffice/SPBO2";
+import SPBO3 from "./problem-pic/backoffice/SPBO3";
+import SPBO4 from "./problem-pic/backoffice/SPBO4";
+import SPBO5 from "./problem-pic/backoffice/SPBO5";
+import SPBO6 from "./problem-pic/backoffice/SPBO6";
+import SPBO7 from "./problem-pic/backoffice/SPBO7";
+import SPBO8 from "./problem-pic/backoffice/SPBO8";
+import SPBO9 from "./problem-pic/backoffice/SPBO9";
+
+
 function BackOffice(){
     return (
-        <div>
+        <div className={"check"}>
             <h1>-משרד אחורי-</h1>
             <h2 id="mg">משרד אחורי לא עולה</h2>
             <h4>קובץ hosts</h4>
@@ -55,7 +67,7 @@ function BackOffice(){
                 <li>להעלות משרד אחורי מחדש לאחר ביצוע ריענון דפדפן</li>
                 <li>לוודא תקינות</li>
             </ol>
-            <img src="chrome.PNG" alt="chrome"/>
+            <SPBO1/>
             <h2 id="browser">הגדרת דפדפן ברירת מחדל</h2>
             <ol>
                 <li className="short">
@@ -73,7 +85,7 @@ function BackOffice(){
                 <li>לצאת מדפדפן Edge </li>
                 <li>להיכנס למשרד האחורי ולוודא תקינות – פתיחת Explorer</li>
             </ol>
-            <img src="ethset.PNG" alt="browser settings"/>
+            <SPBO2/>
             <h2 id="login">הסרת סיסמה מכניסה למשרד אחורי</h2>
             <p>
                 יש לקחת קובץ Tabula.ini מסניף אחר באותה רשת ולהעביר לתיקיית C > windows
@@ -85,7 +97,7 @@ function BackOffice(){
                 תיקיית Priority מהטרמינל לקופת הלקוח לכונן C
             </p>
             <p>נתיב לתיקייה: C:\setup</p>
-            <img src="setuser.PNG" alt="setuser"/>
+            <SPBO3/>
             <h2 id="cer">שגיאת סרטיפיקציה</h2>
             <p><b>הגדרה</b></p>
             <p className="short">
@@ -94,7 +106,7 @@ function BackOffice(){
                 (ארגון שאחראי על הנושא)
             </p>
             <p><b>מה זה אומר בפועל אתה שואל? </b></p>
-            <img src="domain.PNG" alt="domain"/>
+            <SPBO4/>
             <p>בכל דפדפן כאשר נלחץ על המנעול נוכל להיכנס ולצפות בפרטי הסרטיפיקציה</p>
             <p className="short">
                 הנפקת הסרטיפיקציה בעצם מקנה לאתר (ולשרת בעצם) ולידציה שהוא בטוח. יש
@@ -104,7 +116,7 @@ function BackOffice(){
                 ועוד..
             </p>
             <p><b>השגיאה:</b></p>
-            <img src="certificate.PNG" alt="certificate"/>
+            <SPBO5/>
             <p><b>למה זה קורה בכניסה ל-Market Gate?</b></p>
             <p className="short">
                 התקלה צצה לאחר שדרוג מרקטגייט, מדובר במעבר אבטחתי מ-HTTP (פורט 80) הפחות
@@ -134,7 +146,7 @@ function BackOffice(){
                 <li>ייקח מספר שניות ואז תופיע הודעה "Import successful" </li>
                 <li>זהו סוף התהליך!</li>
             </ol>
-            <img src="certificateB.PNG" alt="certificate"/>
+            <SPBO6/>
             <h2 id="info">משתמש למשרד אחורי</h2>
             <p className="short">
                 <b>תקלה:</b> - SC22053636 הודעת שגיאה במשרד אחורי, בפועל המשתמש לא היה
@@ -145,7 +157,7 @@ function BackOffice(){
                 לפי התמונה נתיב בפריורטי: מנהל המערכת > תחזוקת מערכת > משתמשי מערכת >
                 משתמשי מערכת
             </p>
-            <img src="info.PNG" alt="Information"/>
+            <SPBO7/>
             <h2 id="order">תעודה לא נמצאה ע"י לקוח במשרד אחורי</h2>
             <p className="short">
                 <b>תקלה:</b> SC22053797 - תעודה לא נמצאת במשרד אחורי, לא בוצע חיפוש במסך
@@ -155,7 +167,7 @@ function BackOffice(){
                 <b>פיתרון:</b> להלן המסך הנכון – משלוחים ללקוח, התעודה הייתה שייכת למסך
                 זה.
             </p>
-            <img src="order.PNG" alt="order"/>
+            <SPBO8/>
             <h2 id="extension">התקנת תוסף ל-Priority Web</h2>
             <p>במידה והמשרד האחורי בתצורת Priority Web וישנה הודעת שגיאה</p>
             <p>יש להתקין את התוסף בדפדפן Chrome</p>
@@ -164,7 +176,7 @@ function BackOffice(){
                 שמאל/ימין)
             </p>
             <p>Extensions</p>
-            <img src="extension.PNG" alt="extension"/>
+            <SPBO9/>
             <p>במידה ותוסף זה אינו מופיע, נוריד אותו מהקישור בשגיאה</p>
         </div>
     );

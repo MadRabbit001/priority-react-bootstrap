@@ -5,3 +5,41 @@ Header{
 Support1Fix{
     z-index: 1;
 }
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.spinner-inner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px solid #ccc;
+    border-top-color: #333;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
+    padding: 20px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -2,32 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Checks from "./problems/Checks";
 import "./Support1Fix.css"
+import {Route, Routes} from "react-router-dom";
+import Priority from "./problems/Priority";
+import BackOffice from "./problems/BackOffice";
 
-function Support1Fix(){
+function Support1Fix({ content }){
 
-    const [showSpinner, setShowSpinner] = useState(true);
-    const spinnerRef = useRef(null);
 
-    useEffect(() => {
-        if (showSpinner) {
-            setTimeout(() => {
-                setShowSpinner(false);
-            }, 500);
-        }
-    }, [showSpinner]);
 
     return (
         <>
-            {showSpinner && (
-                <div className="spinner" ref={spinnerRef}>
-                    <div className="spinner-inner" />
-                </div>
-            )}
-            {!showSpinner && (
-                <div className="content">
-                        <Checks/>
-                </div>
-            )}
+            {content==="צ'קים" && <Checks/> }
+            {content==='מק"טים' && <Priority/>}
+            {content==="משרד אחורי" && <BackOffice/>}
         </>
     );
 };
