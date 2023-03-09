@@ -5,13 +5,15 @@
     background-repeat: no-repeat;
     overflow: hidden;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     min-height: 100vh;
     min-width: 100%;
 }
 
 .two{
-    /*display: inline-block;*/
+    display: flex;
+    justify-content: center;
     flex: 1;
 }
 
@@ -21,8 +23,8 @@
     flex-direction: column;
     justify-content: flex-end;
     background-color: rgba(110, 110, 110, 0.61);
-    margin-left: 350px;
-    margin-top: 200px;
+    /*margin-left: 350px;*/
+    margin-top: 17%;
     height: 50vh;
     width:38vh;
     border: 1px solid #fff ;
@@ -39,12 +41,15 @@
 /*    margin-left: 20px;*/
 /*}*/
 
+.login iframe{
+    width: 100%;
+}
+
 
 .login input{
-    width: 300px;
+    width: 100%;
     height: 30px;
     font-size: 29px;
-    margin-left: 30px;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -67,13 +72,13 @@
 
 /*/////////IMAGE STYLE + ANIMATION////////*/
 .App-logo{
-    /*position: center;*/
+    position: absolute;
+    right: 31.26%;
+    bottom: 48.25%;
     border-radius: 50%;
-    margin-left: 128.5vh;
-    margin-top: 45vh;
     z-index: 0;
-    height: 66px;
-    width: 66px;
+    height: 6vh;
+    width: 6vh;
 }
 
 .App-logo {
@@ -100,6 +105,14 @@ Footer{
     text-align: center;
     margin-bottom: 1vh;
 }
+
+@media only screen and (max-width: 1919px){
+    .showi{
+        display: none;
+    }
+
+}
+
 
 @media only screen and (max-device-width: 821px){
 

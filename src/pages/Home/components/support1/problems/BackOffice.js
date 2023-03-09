@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import "./Checks.css";
 import SPBO1 from "./problem-pic/backoffice/SPBO1";
@@ -10,21 +10,41 @@ import SPBO6 from "./problem-pic/backoffice/SPBO6";
 import SPBO7 from "./problem-pic/backoffice/SPBO7";
 import SPBO8 from "./problem-pic/backoffice/SPBO8";
 import SPBO9 from "./problem-pic/backoffice/SPBO9";
+// import {Content} from "../../../MODELS/Content";
+import {getData} from "../../../CallService";
+// import {putData} from "../../../CallService";
 
 
 function BackOffice(){
+
+   const  [list, setList] = useState([]);
+
+    useEffect(() => {
+        let mounted = true;
+        getData()
+            .then(items => {
+                if(mounted) {
+                    setList(items)
+                }
+            })
+        return () => mounted = false;
+    }, [])
+
+console.log(list);
+
+
+
+
     return (
+
         <div className={"check"}>
             <h1>-משרד אחורי-</h1>
             <h2 id="mg">משרד אחורי לא עולה</h2>
             <h4>קובץ hosts</h4>
-            <p>
-                קובץ כבד! ייקח זמן להגיע לתיקיות הבאות - ייתכן ונצטרך להעביר לדסקטופ ואז
-                לקופה עצמה
-            </p>
-            <p>ללא קובץ Hosts משרד אחורי לא יעלה, זוהי תקלה נפוצה במחשבים חדשים</p>
-            <p>לוקח מסניף אחר את הקובץ ע"י הנתיב:</p>
-            <p>C:\Windows\System32\drivers\etc</p>
+
+            {list.map(item => <p key={item.id} contentEditable={true}>{item.solution}</p>)}
+
+
             <p>קובץ Hosts </p>
             <p>מושך את הקובץ לקופה בה חסר הקובץ לאותו המיקום בכונן C ע"פ הנתיב</p>
             <p>כניסה לתוכנת קופה</p>
@@ -179,7 +199,31 @@ function BackOffice(){
             <SPBO9/>
             <p>במידה ותוסף זה אינו מופיע, נוריד אותו מהקישור בשגיאה</p>
         </div>
+
+
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /***********************************************/
+
+
 
 export default BackOffice;
