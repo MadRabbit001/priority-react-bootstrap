@@ -23,7 +23,7 @@ const postData = async (data) => {
 // PUT request
 export const putData = async (id, data) => {
     try {
-        const response = await axios.put(`http://localhost:8080/{id}`, data);
+        const response = await axios.put(`http://localhost:8080/${id}`, data);
         return response.data;
     } catch (error) {
         console.error(error);

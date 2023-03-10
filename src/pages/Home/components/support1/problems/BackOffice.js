@@ -13,6 +13,7 @@ import SPBO9 from "./problem-pic/backoffice/SPBO9";
 // import {Content} from "../../../MODELS/Content";
 import {getData} from "../../../CallService";
 // import {putData} from "../../../CallService";
+import axios from "axios";
 
 
 function BackOffice(){
@@ -30,9 +31,78 @@ function BackOffice(){
         return () => mounted = false;
     }, [])
 
-console.log(list);
+// console.log(list);
 
 
+    // const handleSave = (id, updatedContent) => {
+    //     putData(`/content/${id}`, updatedContent)
+    //         .then((response) => {
+    //             console.log(response);
+    //         })
+    //         .catch((error) => {
+    //             console.error(error);
+    //         });
+    // };
+    //
+    // function updateContent(id, updatedText) {
+    //     fetch(`/content/${id}`, {
+    //         method: 'PUT',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(updatedText)
+    //     })
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error('Failed to update content');
+    //             }
+    //         })
+    //         .catch(error => {
+    //             console.error(error);
+    //             // Handle the error
+    //         });
+    // }
+
+
+
+    // const handleContentChange = (id, newContent) => {
+    //     const newList = list.map((item) => {
+    //         if (item.id === id) {
+    //             return { ...item, solution: newContent };
+    //         } else {
+    //             return item;
+    //         }
+    //     });
+    //     setList(newList);
+    //     putData(id, newContent).then((response) => {
+    //         console.log(response);
+    //     })
+    //         .catch((error) => {
+    //             console.error(error);
+    //         });
+    // };
+
+    // const handleContentChange = (event, id) => {
+    //     const newContent = event.target.textContent;
+    //     axios.put(`http://localhost:8080/${id}`, {content: newContent})
+    //         .then(response => {
+    //             console.log(response.data);
+    //         })
+    //         .catch(error => {
+    //             console.log(error);
+    //         });
+    // }
+
+    const handleContentChange = (id, newContent) => {
+        axios.put(`http://localhost:8080/${id}`, {content: newContent.toString()})
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        console.log(newContent);
+
+        return newContent;
+    }
 
 
     return (
@@ -42,7 +112,21 @@ console.log(list);
             <h2 id="mg">משרד אחורי לא עולה</h2>
             <h4>קובץ hosts</h4>
 
-            {list.map(item => <p key={item.id} contentEditable={true}>{item.solution}</p>)}
+            {list.map(function(item) {
+                return (
+                    <p
+                        key={item.id}
+                        contentEditable={true}
+                        onInput={function(e) {
+                            handleContentChange(item.id, e.target.textContent);
+                        }}
+                    >
+                        {item.solution}
+                    </p>
+                )
+            })}
+
+
 
 
             <p>קובץ Hosts </p>
